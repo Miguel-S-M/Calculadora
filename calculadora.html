@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
+    <div class="mostrador">
+        <p class="equacao">escreva algo </p>
+        <p class="resultado">ANSWER</p>
+    </div>
     <div class="Botaomatematicabasicaa">
         <div class="fileira1">
-            <button class="position1"> 7 </button>
-            <button class="position2"> 8 </button>
-            <button class="position3"> 9 </button>
-            <button class="position4"> DEL </button>
-            <button class="position5"> AC </button>
+            <button class="position1" onclick="seven()"> 7 </button>
+            <button class="position2" onclick="eight()"> 8 </button>
+            <button class="position3" onclick="nine()"> 9 </button>
+            <button class="position4" onclick="Del()"> DEL </button>
+            <button class="position5" onclick="AC()"> AC </button>
                 </div>
 
                 <div class="fileira2">
@@ -42,5 +46,48 @@
             <button class="position5"> = </button>
                  </div> 
     </div>
+    <script>
+        function seven () {
+            let a = window.document.querySelector('.equacao');
+                        
+                        if ( a.innerText === 'escreva algo' || a.innerText === '') {
+                            a.innerText = '7';
+                        }
+                        else{
+                            a.append ('7');
+                            }
+        }
+                function eight () {
+            let a = window.document.querySelector('.equacao');
+                        
+                        if ( a.innerText === 'escreva algo' || a.innerText === '') {
+                            a.innerText = '8';
+                        }
+                        else{
+                            a.append ('8');
+                            }
+        }
+                function nine () {
+            let a = window.document.querySelector('.equacao');
+                        
+                        if ( a.innerText === 'escreva algo' || a.innerText === '') {
+                            a.innerText = '9';
+                        }
+                        else{
+                            a.append ('9');
+                            }
+        }
+        function Del(){
+            let a = window.document.querySelector('.equacao')
+            if(a.innerText === 'escreva algo' || a.innerText === ''){
+             return 0;}
+             else {
+                a.innerText = a.innerText.slice(0, -1);
+             }
+             if (a.innerText === '') {
+                a.innerText = 'escreva algo';
+             }
+        }
+    </script>
 </body>
 </html>
