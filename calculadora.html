@@ -13,70 +13,51 @@
     </div>
     <div class="Botaomatematicabasicaa">
         <div class="fileira1">
-            <button class="position1" onclick="seven()"> 7 </button>
-            <button class="position2" onclick="eight()"> 8 </button>
-            <button class="position3" onclick="nine()"> 9 </button>
+            <button class="position1" class="Number" onclick="Numeros(this)" value="7"> 7 </button>
+            <button class="position2" class="Number" onclick="Numeros(this)" value="8"> 8 </button>
+            <button class="position3" class="Number" onclick="Numeros(this)" value="9"> 9 </button>
             <button class="position4" onclick="Del()"> DEL </button>
             <button class="position5" onclick="AC()"> AC </button>
                 </div>
 
                 <div class="fileira2">
-            <button class="position1"> 4 </button>
-            <button class="position2"> 5 </button>
-            <button class="position3"> 6 </button>
+            <button class="position1" class="Number" onclick="Numeros(this)" value="4"> 4 </button>
+            <button class="position2"  class="Number" onclick="Numeros(this)" value="5"> 5 </button>
+            <button class="position3"  class="Number" onclick="Numeros(this)" value="6"> 6 </button>
             <button class="position4"> × </button>
             <button class="position5"> ÷ </button>
                  </div> 
 
 
              <div class="fileira3">
-            <button class="position1"> 1 </button>
-            <button class="position2"> 2 </button>
-            <button class="position3"> 3 </button>
+            <button class="position1" class="Number" onclick="Numeros(this)" value="1"> 1 </button>
+            <button class="position2" class="Number" onclick="Numeros(this)" value="2"> 2 </button>
+            <button class="position3" class="Number" onclick="Numeros(this)" value="3"> 3 </button>
             <button class="position4"> + </button>
             <button class="position5"> - </button>
                  </div> 
                  
                   
              <div class="fileira4">
-            <button class="position1"> 0 </button>
-            <button class="position2"> . </button>
+            <button class="position1" onclick="Numeros(this)"> 0 </button>
+            <button class="position2" > . </button>
             <button class="position3"> π </button>
             <button class="position4"> H </button>
             <button class="position5"> = </button>
                  </div> 
     </div>
     <script>
-        function seven () {
-            let a = window.document.querySelector('.equacao');
-                        
+        function Numeros (valor) {  
+               let a = window.document.querySelector('.equacao');
+               let numero = valor.innerText;
                         if ( a.innerText === 'escreva algo' || a.innerText === '') {
-                            a.innerText = '7';
+                            a.innerText = numero;
                         }
                         else{
-                            a.append ('7');
+                            a.append (numero);
                             }
         }
-                function eight () {
-            let a = window.document.querySelector('.equacao');
-                        
-                        if ( a.innerText === 'escreva algo' || a.innerText === '') {
-                            a.innerText = '8';
-                        }
-                        else{
-                            a.append ('8');
-                            }
-        }
-                function nine () {
-            let a = window.document.querySelector('.equacao');
-                        
-                        if ( a.innerText === 'escreva algo' || a.innerText === '') {
-                            a.innerText = '9';
-                        }
-                        else{
-                            a.append ('9');
-                            }
-        }
+                
         function Del(){
             let a = window.document.querySelector('.equacao')
             if(a.innerText === 'escreva algo' || a.innerText === ''){
@@ -87,6 +68,10 @@
              if (a.innerText === '') {
                 a.innerText = 'escreva algo';
              }
+        }
+        function AC(){
+            let a = window.document.querySelector('.equacao');
+            a.innerText = 'escreva algo';
         }
     </script>
 </body>
